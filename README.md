@@ -1,4 +1,4 @@
-Backbone-table
+Backbone Table Manager
 ==================================
 
 #Description
@@ -9,15 +9,11 @@ json data.
 #Features
 - Click to edit row
 - Display dialog 
+- Pagination 
 
 #Pending
 - Delete rows
-- Validates edits
-- Pagination
 - Order by column   
 
-#Correct
-- Don't display ID on dialog
-- Separate mvc for table individually
 
     
