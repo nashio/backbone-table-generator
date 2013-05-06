@@ -1,0 +1,15 @@
+{
+  "title": "Backbone Table Manager",
+  "description": "Populates a table and applies pagination",
+  "version": "0.1",
+  "homepage": "",
+  "author": {
+    "name": "Ignacio Chavez",
+    "url": "http://www.ignaciochavez.com"
+  },
+  "dependencies": {
+    "express": "3.x"
+  },
+  "main": "./server/server",
+  "keywords": ["Backbone.js", "Require.js", "Backbone and Require Boilerplate"]
+}
