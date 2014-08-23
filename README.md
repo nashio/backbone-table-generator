@@ -7,7 +7,6 @@ A simple Backbone setup to manage a table of data with the purpose of demostrati
 **Demo**
 http://nashio.github.io/table
 
-
 **Features**
 - Edit row
 - Open Modal
