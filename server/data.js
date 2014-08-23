@@ -1,9 +1,7 @@
-module.exports = {        
+module.exports = {
 
         config : {
-
            limit : "5",
-           page : 1,
            paginate : true,
            table_id : "#grid",
            columns : [
@@ -14,8 +12,6 @@ module.exports = {
               "State"
            ],
         },
-
-
 
         rows : [
           {
@@ -50,15 +46,15 @@ module.exports = {
             "city" : "Bay City",
             "state" : "Michigan"
           },
-          {                        
+          {
             "id" : "55",
             "firstname" : "Louis",
             "lastname" : "Clark",
             "email" : "crazy@server.com",
             "city" : "Santa Ana",
             "state" : "California"
-          },                        
-          { 
+          },
+          {
             "id" : "66",
             "firstname" : "Don",
             "lastname" : "Watson",
@@ -74,15 +70,15 @@ module.exports = {
             "city" : "Bay City",
             "state" : "Michigan"
           },
-          {                        
+          {
             "id" : "88",
             "firstname" : "Kelly",
             "lastname" : "Benson",
             "email" : "kelly@benson.com",
             "city" : "Santa Ana",
             "state" : "California"
-          },                        
-          { 
+          },
+          {
             "id" : "99",
             "firstname" : "Diana",
             "lastname" : "Johnson",
@@ -98,15 +94,15 @@ module.exports = {
             "city" : "Bay City",
             "state" : "Michigan"
           },
-          {                        
+          {
             "id" : "111",
             "firstname" : "Crane",
             "lastname" : "Doe",
             "email" : "crane@doe.com",
             "city" : "Los Pinos",
             "state" : "Ohio"
-          },                        
-          { 
+          },
+          {
             "id" : "122",
             "firstname" : "Diana",
             "lastname" : "Johnson",
@@ -114,15 +110,15 @@ module.exports = {
             "city" : "Jersey City",
             "state" : "New Jersey"
           },
-          {                        
+          {
             "id" : "133",
             "firstname" : "Ben",
             "lastname" : "James",
             "email" : "ben@james.com",
             "city" : "Illinois",
             "state" : "Chicago"
-          },                        
-          { 
+          },
+          {
             "id" : "144",
             "firstname" : "Dean",
             "lastname" : "Johnson",

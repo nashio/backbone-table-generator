@@ -1,19 +1,19 @@
 // View.js
 // -------
-define(["jquery", "backbone", "text!templates/nav.html"],
+define(["jquery", "backbone", "app/helpers/load-data","text!templates/nav.html"],
 
-    function($, Backbone, navHTML){
-        
+    function($, Backbone, loader, navHTML){
+
         var View = Backbone.View.extend({
 
             tagName: "tfoot",
 
             // View constructor
             initialize: function() {
-                this.loader = require("app/config/loader");
-                this.page = this.options.config.page;
+                this.app = require("app/app");
                 this.total = this.options.config.total;
                 this.config = this.options.config;
+                this.page = this.options.page;
             },
 
             // View Event Handlers
@@ -25,50 +25,43 @@ define(["jquery", "backbone", "text!templates/nav.html"],
             // Handles row click
             prevPage : function(e) {
                 e.preventDefault();
-                
+
                 if( this.page > 1 ){
                     this.page--;
                 } else {
                     this.page = this.total;
                 }
-                this.loader({ "page" : this.page });
-                
+                Backbone.history.navigate('/page/' + this.page, true);
+
             },
 
             // Handles row click
             nextPage : function(e) {
                 e.preventDefault();
-                
                 if( this.page < this.total ){
                     this.page++;
                 } else {
                     this.page = 1;
                 }
-                this.loader({ "page" : this.page });
-                
 
+                Backbone.history.navigate('/page/' + this.page, true);
             },
 
             // Renders the view's template to the UI
             render: function() {
-
                 // Compile the template, passing the model without the id included
-
-                this.template = _.template(navHTML, { 
-                    page : this.page, 
+                this.template = _.template(navHTML, {
+                    page : this.page,
                     total : this.total
                 });
-
                 this.$el.html(this.template);
-
-                return this;                
+                return this;
             }
 
         });
 
         // Returns the View class
         return View;
-
     }
 
 );

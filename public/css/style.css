@@ -2,6 +2,10 @@
 	margin: 0;
 }
 
+tr .remove {
+    text-align: center;
+}
+
 tfoot {
 	border: 0;
 }

@@ -6,38 +6,38 @@ define(["jquery", "backbone", "text!templates/row.html"],
 
         var View = Backbone.View.extend({
 
-            // The DOM Element associated with this view
             tagName: "tr",
 
-            // View constructor
             initialize: function() {
                 this.model.bind("change", this.render, this )
             },
 
-            // View Event Handlers
             events: {
-                "click td" : "handleRow"
+                "click td:not(.remove)" : "handleRow",
+                "click td.remove" : "removeRow"
             },
 
-            // Handles row click
             handleRow : function(e) {
                 var dialogView = $('.dialog').data("view");
                 dialogView.model.set( this.model.toJSON() );
-                
-                // Display the modal
-                $('.dialog #myModal').modal("show"); 
+                $('.dialog #myModal').modal("show");
             },
 
-            // Renders the view's template to the UI
+            removeRow : function(e) {
+                e.preventDefault();
+                this.model.trigger('delete', this.model);
+            },
+
             render: function() {
 
-                // Compile the template, passing the model without the id included
-
-                this.template = _.template(rowHTML, { row : _.omit(this.model.toJSON(), 'id') } );
+                // Compile the template, passing the model without the id, status
+                this.template = _.template(rowHTML, {
+                    row : _.omit(this.model.toJSON(), 'id', 'status')
+                });
 
                 this.$el.html(this.template);
 
-                return this;                
+                return this;
             }
 
         });

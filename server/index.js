@@ -17,19 +17,21 @@ app.use(express.bodyParser());
 
 
 
-app.get("/data", function( req, res ){	
+app.get("/data", function( req, res ){
 	var obj = { rows : [] };
 	var limit = data.config.limit;
 	var page = req.query.page || data.config.page;
-	var start = (page*limit) - limit;
+	var start = (page * limit) - limit;
 	var end = (Number(start) + Number(limit) ) -1;
 	var total = Math.ceil(data.rows.length/limit);
 
-	// add rows 
+	// add rows
 	if( page <= total ){
 		for(var i = start; i <= end; i++){
-			obj.rows.push(data.rows[i]);
-		}		
+			if(data.rows[i] !== undefined) {
+				obj.rows.push(data.rows[i]);
+			}
+		}
 	}
 
 	// add config

@@ -2,16 +2,29 @@ Backbone Table Manager
 ==================================
 
 #Description
-A simple Backbone setup to manage a table of data to demostrate the use of models and collections using tables.  Uses RequireJS, Bootstrap, and node to retrieve json data.
+A simple Backbone setup to manage a table of data to demostrate the use of models and collections using html tables.  Uses RequireJS, Bootstrap, and node.js as the serve to retrieve users.
 
 #Features
-- Click to edit row
-- Display dialog 
-- Pagination 
+- Edit row
+- Open Modal
+- Pagination / Routing
+- Delete
 
-#Pending
-- Delete rows
-- Order by column   
+#Todo
+- Order by column
+- Add persistant layer (Mongo or Mysql)
+
+# Requirements
+
+* [NodeJs](http://nodejs.org/download/)
+
+# Start
+node server
+
+# Demo
+http://nashio.github.io/table
 
 
-    
+
+
+

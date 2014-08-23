@@ -15,7 +15,7 @@ define(["jquery", "backbone"],
 
             // Default values for all of the Model attributes
             defaults: {
-
+                status : true
             },
 
             render: function() {
@@ -24,7 +24,7 @@ define(["jquery", "backbone"],
 
             // Gets called automatically by Backbone when the set and/or save methods are called (Add your own logic)
             validate: function(attrs) {
-                console.log(" Validating ", this.toJSON());
+                console.log("Validating " ,  this.toJSON());
             }
 
         });
