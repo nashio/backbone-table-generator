@@ -2,6 +2,7 @@ Backbone Table Manager
 ==================================
 
 **Description**
+
 Creates an interactive html table using Backbone.js, RequireJS, Bootstrap, and node.js as the service to retrieve data.
 
 **Features**
