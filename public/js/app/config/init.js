@@ -31,7 +31,7 @@ require.config({
 
       "models": "app/models",
 
-      "routers": "app/routers",
+      "router": "app/router",
 
       "templates": "app/templates",
 
@@ -63,7 +63,7 @@ require.config({
 
 });
 // Includes Desktop Specific JavaScript files here (or inside of your Desktop router)
-require(["jquery", "backbone", "routers/router", "bootstrap", "backbone.validateAll"],
+require(["jquery", "backbone", "router/router", "bootstrap", "backbone.validateAll"],
     function($, Backbone, router) {
         new router();
     }

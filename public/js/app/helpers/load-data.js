@@ -1,4 +1,4 @@
-define(['routers/router'],
+define(['router/router'],
     function(router){
 
         // set a default page
