@@ -2,7 +2,7 @@ Backbone Table Manager
 ==================================
 
 **Description**
-A simple Backbone setup to manage a table of data with the purpose of demostrating the use of models and collections using html tables.  Uses RequireJS, Bootstrap, and node.js as the service.
+Creates an interactive html table using Backbone.js, RequireJS, Bootstrap, and node.js as the service to retrieve data.
 
 **Features**
 - Edit row
