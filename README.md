@@ -5,7 +5,7 @@ Backbone Table Manager
 
 Creates an interactive html table using Backbone & RequireJS.
 
-Populates a demo data-set using node.js.
+Populates data-set using node.js and a demo JSON file.
 
 **Features**
 - Edit row
