@@ -15,7 +15,7 @@ Populates data-set using node.js and a demo JSON file.
 
 **Todo**
 - Order by column
-- Add persistant layer (Mongo or Mysql)
+- Add persistent layer to save edits (Mongo or Mysql)
 
 **Requirements**
 
